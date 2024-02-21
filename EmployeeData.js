@@ -80,17 +80,15 @@ result = employees_collection.update_many(query, new_data)
 print(result)
 
 //DeleteOneOperation
-//Update All Employees
-query = {}  # An empty query matches all documents
-new_data = {'$set': {'department': 'Engineering'}}
-result = employees_collection.update_many(query, new_data)
+//Delete One Employee
+query = {'employee_id': 102}
+result = employees_collection.delete_one(query)
 print(result)
 
 //DeleteManyOperation
-//Update All Employees
+//Delete All Employees
 query = {}  # An empty query matches all documents
-new_data = {'$set': {'department': 'Engineering'}}
-result = employees_collection.update_many(query, new_data)
+result = employees_collection.delete_many(query)
 print(result)
 
 
