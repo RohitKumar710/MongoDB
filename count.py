@@ -11,7 +11,7 @@ client = MongoClient(uri, server_api=ServerApi('1'))
 try:
     # Send a ping to confirm a successful connection
     client.admin.command('ping')
-
+ 
     # Get reference to 'sample_training' database
     db = client.sample_training
 
